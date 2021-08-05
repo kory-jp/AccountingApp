@@ -1,9 +1,0 @@
-  [1m[35m (7.7ms)[0m  [1m[35mCREATE DATABASE `AccountingApp_development` DEFAULT CHARACTER SET `utf8mb4`[0m
-  [1m[35m (6.2ms)[0m  [1m[35mCREATE DATABASE `AccountingApp_test` DEFAULT CHARACTER SET `utf8mb4`[0m
-Started GET "/" for 172.18.0.1 at 2021-08-05 10:36:35 +0000
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /usr/local/bundle/gems/railties-6.0.4/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /usr/local/bundle/gems/railties-6.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 25.7ms | Allocations: 461)
-Completed 200 OK in 155ms (Views: 96.5ms | ActiveRecord: 0.0ms | Allocations: 2651)
-
-
