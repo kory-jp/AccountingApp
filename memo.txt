@@ -1,0 +1,48 @@
+root
+  -docker-compose.yml
+
+api
+  -Dockerfile
+  -entrypoint.sh
+  -Gemfile
+  -Gemfile.lock
+
+front
+  -Dockerfile_node
+
+
+chomd
+  docker-compose run api rails new . --force --no-deps -d mysql --api
+  docker-compose build
+  
+  ~~~~~~~~
+  default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: password
+  host: db
+  ~~~~~~~~~~
+
+  docker-compose run api rails db:create
+  docker-compose up -d
+  localhost:3001
+
+  cd front
+  docker-compose run front sh -c 'npx create-react-app front-app'
+
+  cd front-app
+  rm .gitignore
+  rm README.md
+
+  cd ../../
+  cd api
+  rm -rf .git
+  rm .gitignore
+  rm README.md
+  cd ..
+
+GitHub
+  git init
+  
